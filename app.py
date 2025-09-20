@@ -5,7 +5,7 @@ import json
 import os
 from datetime import datetime
 
-from workflow import RequirementsWorkflow
+from workflow import RequirementGatheringWorkflow
 from models import WorkflowState
 from config import load_config
 
@@ -222,4 +222,4 @@ async def list_results():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
