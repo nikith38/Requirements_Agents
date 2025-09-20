@@ -1,0 +1,15 @@
+# Core dependencies
+langchain
+langchain-openai
+langgraph
+pydantic
+openai
+
+# Utility dependencies
+python-dotenv
+typing-extensions
+
+# Optional dependencies for enhanced functionality
+streamlit  # For web UI
+fastapi   # For API endpoints
+uvicorn    # ASGI server

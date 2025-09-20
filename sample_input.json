@@ -1,0 +1,64 @@
+# Sample Requirements Input
+
+We need to build a comprehensive e-commerce platform that will serve both B2B and B2C customers.
+
+## Core Features Needed:
+
+1. **User Management**
+   - User registration and authentication
+   - Profile management
+   - Role-based access control (customers, vendors, admins)
+   - Social media login integration
+
+2. **Product Catalog**
+   - Product listing and search functionality
+   - Category and tag management
+   - Product reviews and ratings
+   - Inventory management
+   - Multi-vendor support
+
+3. **Shopping Experience**
+   - Shopping cart functionality
+   - Wishlist management
+   - Product comparison
+   - Recommendation engine
+   - Mobile-responsive design
+
+4. **Order Management**
+   - Checkout process
+   - Multiple payment methods (credit cards, PayPal, digital wallets)
+   - Order tracking
+   - Return and refund management
+   - Invoice generation
+
+5. **Business Intelligence**
+   - Sales analytics and reporting
+   - Customer behavior tracking
+   - Inventory analytics
+   - Performance dashboards
+
+## Non-Functional Requirements:
+
+- The system should handle 10,000 concurrent users
+- Page load times should be under 2 seconds
+- 99.9% uptime availability
+- GDPR and PCI DSS compliance
+- Multi-language support (English, Spanish, French)
+- Mobile-first responsive design
+- SEO optimization
+
+## Technical Constraints:
+
+- Must integrate with existing ERP system
+- Should use cloud infrastructure (AWS preferred)
+- Must support API integrations for third-party services
+- Database should be scalable and support high availability
+
+## Business Goals:
+
+- Increase online sales by 40% within first year
+- Reduce customer acquisition cost by 25%
+- Improve customer satisfaction scores to 4.5/5
+- Support expansion to 3 new markets within 18 months
+
+The project timeline is 8 months with a budget of $500,000. The system needs to be launched before the holiday shopping season.

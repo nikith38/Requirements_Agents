@@ -1,0 +1,835 @@
+{
+  "timestamp": "2025-09-21T02:06:51.162637",
+  "raw_input": "We need a web application that allows users to register, login, and manage their profiles. The system should be secure, fast, and user-friendly.",
+  "current_stage": "completed",
+  "iteration_count": 0,
+  "errors": [],
+  "warnings": [
+    "Workflow completed with quality score: 0.72"
+  ],
+  "processing_time": {
+    "intake": 14.702112197875977,
+    "analysis": 21.18454098701477,
+    "ambiguity_detection": 14.668618202209473,
+    "stakeholder_simulation": 30.84656286239624,
+    "validation": 17.655974626541138,
+    "documentation": 21.62626338005066
+  },
+  "quality_metrics": {
+    "overall_quality": 0.7200000000000001
+  },
+  "intake_output": {
+    "parsed_requirements": [
+      {
+        "id": "req-001",
+        "type": "functional",
+        "description": "The web application must allow users to register.",
+        "source": "We need a web application that allows users to register, login, and manage their profiles.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "high",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "req-002",
+        "type": "functional",
+        "description": "The web application must allow users to login.",
+        "source": "We need a web application that allows users to register, login, and manage their profiles.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "high",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "req-003",
+        "type": "functional",
+        "description": "The web application must allow users to manage their profiles.",
+        "source": "We need a web application that allows users to register, login, and manage their profiles.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "high",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "req-004",
+        "type": "non_functional",
+        "description": "The web application must be secure.",
+        "source": "The system should be secure, fast, and user-friendly.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "high",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "req-005",
+        "type": "non_functional",
+        "description": "The web application must be fast.",
+        "source": "The system should be secure, fast, and user-friendly.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "medium",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      },
+      {
+        "id": "req-006",
+        "type": "non_functional",
+        "description": "The web application must be user-friendly.",
+        "source": "The system should be secure, fast, and user-friendly.",
+        "stakeholders": [
+          "users",
+          "system administrators"
+        ],
+        "priority": "medium",
+        "confidence": 1.0,
+        "extracted_at": "2023-10-01T12:00:00Z"
+      }
+    ],
+    "metadata": {
+      "total_requirements": 6,
+      "processing_notes": "All requirements were clearly defined and extracted from the input.",
+      "input_length": 118,
+      "processing_time": 0.5
+    }
+  },
+  "analysis_output": {
+    "analyzed_requirements": [
+      {
+        "id": "req-001",
+        "original_requirement": "The web application must allow users to register.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-001-1",
+            "description": "Users must be able to enter their personal information for registration.",
+            "acceptance_criteria": [
+              "User can input name, email, and password.",
+              "User receives a confirmation email after registration."
+            ],
+            "estimated_complexity": "medium"
+          }
+        ],
+        "dependencies": [],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.7,
+        "testability_score": 0.9
+      },
+      {
+        "id": "req-002",
+        "original_requirement": "The web application must allow users to login.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-002-1",
+            "description": "Users must be able to enter their credentials to log in.",
+            "acceptance_criteria": [
+              "User can input email and password.",
+              "User receives an error message for incorrect credentials."
+            ],
+            "estimated_complexity": "medium"
+          }
+        ],
+        "dependencies": [
+          "req-001"
+        ],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.7,
+        "testability_score": 0.9
+      },
+      {
+        "id": "req-003",
+        "original_requirement": "The web application must allow users to manage their profiles.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-003-1",
+            "description": "Users must be able to update their personal information.",
+            "acceptance_criteria": [
+              "User can change their name, email, and password.",
+              "Changes are saved and reflected in the user profile."
+            ],
+            "estimated_complexity": "medium"
+          }
+        ],
+        "dependencies": [
+          "req-001",
+          "req-002"
+        ],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.7,
+        "testability_score": 0.9
+      },
+      {
+        "id": "req-004",
+        "original_requirement": "The web application must be secure.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-004-1",
+            "description": "The application must use HTTPS for all communications.",
+            "acceptance_criteria": [
+              "All data transmitted must be encrypted.",
+              "Users must be notified of security measures."
+            ],
+            "estimated_complexity": "high"
+          }
+        ],
+        "dependencies": [],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.6,
+        "testability_score": 0.8
+      },
+      {
+        "id": "req-005",
+        "original_requirement": "The web application must be fast.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-005-1",
+            "description": "The application must load within 2 seconds.",
+            "acceptance_criteria": [
+              "Page load times are measured and reported.",
+              "Performance optimization techniques are implemented."
+            ],
+            "estimated_complexity": "high"
+          }
+        ],
+        "dependencies": [],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.7,
+        "testability_score": 0.9
+      },
+      {
+        "id": "req-006",
+        "original_requirement": "The web application must be user-friendly.",
+        "decomposed_requirements": [
+          {
+            "sub_id": "req-006-1",
+            "description": "The application must have an intuitive navigation system.",
+            "acceptance_criteria": [
+              "Users can easily find key features.",
+              "User feedback is collected to improve usability."
+            ],
+            "estimated_complexity": "medium"
+          }
+        ],
+        "dependencies": [],
+        "conflicts": [],
+        "completeness_score": 0.8,
+        "specificity_score": 0.7,
+        "testability_score": 0.9
+      }
+    ],
+    "analysis_summary": {
+      "total_conflicts": 0,
+      "dependency_count": 5,
+      "completeness_issues": [],
+      "circular_dependencies": [],
+      "orphaned_requirements": []
+    }
+  },
+  "ambiguity_output": {
+    "ambiguity_analysis": [
+      {
+        "requirement_id": "req-001",
+        "ambiguity_score": 0.4,
+        "ambiguous_terms": [],
+        "missing_information": [],
+        "clarification_questions": [],
+        "suggested_improvements": [
+          "Define what personal information is required for registration."
+        ],
+        "vague_quantifiers": [],
+        "undefined_terms": []
+      },
+      {
+        "requirement_id": "req-002",
+        "ambiguity_score": 0.4,
+        "ambiguous_terms": [],
+        "missing_information": [],
+        "clarification_questions": [],
+        "suggested_improvements": [
+          "Specify what credentials are required for login."
+        ],
+        "vague_quantifiers": [],
+        "undefined_terms": []
+      },
+      {
+        "requirement_id": "req-003",
+        "ambiguity_score": 0.4,
+        "ambiguous_terms": [],
+        "missing_information": [],
+        "clarification_questions": [],
+        "suggested_improvements": [
+          "Clarify what personal information can be updated."
+        ],
+        "vague_quantifiers": [],
+        "undefined_terms": []
+      },
+      {
+        "requirement_id": "req-004",
+        "ambiguity_score": 0.6,
+        "ambiguous_terms": [
+          "secure"
+        ],
+        "missing_information": [],
+        "clarification_questions": [
+          {
+            "question": "What specific security measures are required beyond HTTPS?",
+            "target_stakeholder": "technical",
+            "urgency": "high",
+            "context": "To ensure comprehensive security for the application."
+          }
+        ],
+        "suggested_improvements": [
+          "Define what 'secure' means in the context of the application."
+        ],
+        "vague_quantifiers": [],
+        "undefined_terms": []
+      },
+      {
+        "requirement_id": "req-005",
+        "ambiguity_score": 0.5,
+        "ambiguous_terms": [
+          "fast"
+        ],
+        "missing_information": [],
+        "clarification_questions": [
+          {
+            "question": "What specific performance metrics define 'fast' for the application?",
+            "target_stakeholder": "technical",
+            "urgency": "high",
+            "context": "To ensure that performance expectations are clear."
+          }
+        ],
+        "suggested_improvements": [
+          "Define what 'fast' means in terms of user experience."
+        ],
+        "vague_quantifiers": [
+          "fast"
+        ],
+        "undefined_terms": []
+      },
+      {
+        "requirement_id": "req-006",
+        "ambiguity_score": 0.5,
+        "ambiguous_terms": [
+          "user-friendly"
+        ],
+        "missing_information": [],
+        "clarification_questions": [
+          {
+            "question": "What specific features or design elements make the application 'user-friendly'?",
+            "target_stakeholder": "user",
+            "urgency": "high",
+            "context": "To ensure that user experience expectations are clear."
+          }
+        ],
+        "suggested_improvements": [
+          "Define what 'user-friendly' means in the context of the application."
+        ],
+        "vague_quantifiers": [
+          "user-friendly"
+        ],
+        "undefined_terms": []
+      }
+    ],
+    "overall_ambiguity_score": 0.5,
+    "critical_ambiguities": [
+      "req-004",
+      "req-005",
+      "req-006"
+    ],
+    "total_questions_generated": 3
+  },
+  "stakeholder_output": {
+    "stakeholder_feedback": [
+      {
+        "requirement_id": "req-001",
+        "stakeholder_type": "user",
+        "concerns": [
+          "What information is required for registration?",
+          "Is there a verification process after registration?"
+        ],
+        "questions": [
+          "Will users be able to register using social media accounts?",
+          "What happens if a user forgets their registration details?"
+        ],
+        "suggestions": [
+          "Include a confirmation email after registration.",
+          "Provide a clear error message for failed registrations."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The requirement lacks details on the registration process.",
+        "business_impact": "Improved user onboarding can increase user retention.",
+        "technical_feasibility": "The registration process is feasible with current technology."
+      },
+      {
+        "requirement_id": "req-002",
+        "stakeholder_type": "user",
+        "concerns": [
+          "What authentication methods will be supported?",
+          "Is there a password recovery option?"
+        ],
+        "questions": [
+          "Will there be a limit on login attempts?",
+          "How will user sessions be managed?"
+        ],
+        "suggestions": [
+          "Implement multi-factor authentication for enhanced security.",
+          "Provide a 'Remember Me' option for convenience."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The requirement needs clarification on security measures.",
+        "business_impact": "Secure login can enhance user trust.",
+        "technical_feasibility": "Implementing various authentication methods is feasible."
+      },
+      {
+        "requirement_id": "req-003",
+        "stakeholder_type": "user",
+        "concerns": [
+          "What specific profile management features will be available?",
+          "Can users upload profile pictures?"
+        ],
+        "questions": [
+          "Will users be able to change their usernames?",
+          "How will privacy settings be managed?"
+        ],
+        "suggestions": [
+          "Include options for users to manage privacy settings.",
+          "Allow users to view their activity history."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The requirement is too vague regarding profile management.",
+        "business_impact": "Enhanced profile management can improve user engagement.",
+        "technical_feasibility": "Profile management features are technically feasible."
+      },
+      {
+        "requirement_id": "req-004",
+        "stakeholder_type": "business",
+        "concerns": [
+          "What specific security measures will be implemented?",
+          "How will compliance with regulations be ensured?"
+        ],
+        "questions": [
+          "Is there a plan for regular security audits?",
+          "What happens in case of a data breach?"
+        ],
+        "suggestions": [
+          "Define security protocols and standards to be followed.",
+          "Include a response plan for security incidents."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The term 'secure' is too ambiguous without specific measures.",
+        "business_impact": "Clear security measures can protect company reputation.",
+        "technical_feasibility": "Implementing security measures is feasible but requires planning."
+      },
+      {
+        "requirement_id": "req-005",
+        "stakeholder_type": "technical",
+        "concerns": [
+          "What metrics will define 'fast'?",
+          "How will performance be measured?"
+        ],
+        "questions": [
+          "Is there a target load time for the application?",
+          "What are the expected user loads?"
+        ],
+        "suggestions": [
+          "Specify performance benchmarks for the application.",
+          "Consider using caching mechanisms to improve speed."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The requirement lacks measurable criteria for performance.",
+        "business_impact": "Defining performance can lead to better user satisfaction.",
+        "technical_feasibility": "Performance improvements are achievable with proper architecture."
+      },
+      {
+        "requirement_id": "req-006",
+        "stakeholder_type": "qa",
+        "concerns": [
+          "What does 'user-friendly' mean in this context?",
+          "How will usability be tested?"
+        ],
+        "questions": [
+          "Are there specific user personas to consider?",
+          "What accessibility standards will be followed?"
+        ],
+        "suggestions": [
+          "Define usability metrics and testing methods.",
+          "Include user testing phases in the development process."
+        ],
+        "approval_status": "needs_revision",
+        "rationale": "The term 'user-friendly' is subjective and needs clarification.",
+        "business_impact": "Improving usability can lead to higher user satisfaction.",
+        "technical_feasibility": "Usability testing can be integrated into the development cycle."
+      }
+    ],
+    "conflict_analysis": [
+      {
+        "conflicting_requirements": [
+          "req-004",
+          "req-005"
+        ],
+        "stakeholders_involved": [
+          "business",
+          "technical"
+        ],
+        "conflict_description": "The business stakeholder wants clear security measures, while the technical stakeholder is focused on performance metrics.",
+        "proposed_resolution": "Define specific security measures that do not compromise performance benchmarks.",
+        "impact_assessment": "Failure to resolve this conflict may lead to either inadequate security or poor performance.",
+        "resolution_priority": "high"
+      }
+    ],
+    "consensus_requirements": [],
+    "disputed_requirements": [
+      "req-001",
+      "req-002",
+      "req-003",
+      "req-004",
+      "req-005",
+      "req-006"
+    ]
+  },
+  "validation_output": {
+    "validation_results": [
+      {
+        "requirement_id": "req-001",
+        "business_alignment_score": 0.8,
+        "technical_feasibility_score": 0.9,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "medium",
+        "estimated_effort": "3 days",
+        "risks": [
+          "Unclear registration information requirements",
+          "Potential for user data privacy issues"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Clarify required information for registration and verification process.",
+        "resource_requirements": [
+          "Frontend developer",
+          "Backend developer"
+        ],
+        "timeline_impact": "Moderate impact due to potential changes in requirements."
+      },
+      {
+        "requirement_id": "req-002",
+        "business_alignment_score": 0.8,
+        "technical_feasibility_score": 0.9,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "medium",
+        "estimated_effort": "3 days",
+        "risks": [
+          "Uncertainty about supported authentication methods",
+          "Password recovery process may complicate implementation"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Define authentication methods and password recovery options.",
+        "resource_requirements": [
+          "Frontend developer",
+          "Backend developer"
+        ],
+        "timeline_impact": "Moderate impact due to dependencies on registration."
+      },
+      {
+        "requirement_id": "req-003",
+        "business_alignment_score": 0.8,
+        "technical_feasibility_score": 0.9,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "medium",
+        "estimated_effort": "4 days",
+        "risks": [
+          "Lack of clarity on profile management features",
+          "Potential complexity in allowing profile picture uploads"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Specify profile management features and upload capabilities.",
+        "resource_requirements": [
+          "Frontend developer",
+          "Backend developer"
+        ],
+        "timeline_impact": "Moderate impact due to dependencies on login and registration."
+      },
+      {
+        "requirement_id": "req-004",
+        "business_alignment_score": 0.9,
+        "technical_feasibility_score": 0.8,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "high",
+        "estimated_effort": "5 days",
+        "risks": [
+          "Unclear security measures may lead to vulnerabilities",
+          "Compliance with regulations may require additional resources"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Detail specific security measures and compliance strategies.",
+        "resource_requirements": [
+          "Security expert",
+          "Backend developer"
+        ],
+        "timeline_impact": "High impact due to complexity of security implementation."
+      },
+      {
+        "requirement_id": "req-005",
+        "business_alignment_score": 0.8,
+        "technical_feasibility_score": 0.9,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "medium",
+        "estimated_effort": "3 days",
+        "risks": [
+          "Ambiguity in defining 'fast' may lead to misalignment with user expectations",
+          "Performance measurement may require additional tools"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Clarify metrics for performance and measurement methods.",
+        "resource_requirements": [
+          "Performance analyst",
+          "Frontend developer"
+        ],
+        "timeline_impact": "Moderate impact due to potential need for performance testing."
+      },
+      {
+        "requirement_id": "req-006",
+        "business_alignment_score": 0.8,
+        "technical_feasibility_score": 0.9,
+        "compliance_status": "needs_review",
+        "implementation_complexity": "medium",
+        "estimated_effort": "3 days",
+        "risks": [
+          "Vague definition of 'user-friendly' may lead to inconsistent implementation",
+          "Usability testing may require user feedback and iterations"
+        ],
+        "validation_status": "needs_revision",
+        "validation_notes": "Define 'user-friendly' and outline usability testing methods.",
+        "resource_requirements": [
+          "UX designer",
+          "Frontend developer"
+        ],
+        "timeline_impact": "Moderate impact due to potential iterations based on user feedback."
+      }
+    ],
+    "overall_validation_score": 0.83,
+    "critical_issues": [
+      "Unclear requirements leading to potential implementation risks",
+      "Need for detailed specifications in multiple areas"
+    ],
+    "recommendations": [
+      "Engage stakeholders to clarify requirements",
+      "Conduct workshops to define specific features and metrics",
+      "Allocate resources for security and usability testing"
+    ],
+    "approved_requirements": [],
+    "rejected_requirements": []
+  },
+  "documentation_output": {
+    "documentation": {
+      "executive_summary": "This document outlines the requirements for a web application that enables users to register, login, and manage their profiles. The application is designed to be secure, fast, and user-friendly, ensuring a positive user experience while maintaining high standards of security and performance.",
+      "requirements_document": {
+        "functional_requirements": [
+          {
+            "id": "req-001",
+            "description": "The web application must allow users to register.",
+            "priority": "HIGH"
+          },
+          {
+            "id": "req-002",
+            "description": "The web application must allow users to login.",
+            "priority": "HIGH"
+          },
+          {
+            "id": "req-003",
+            "description": "The web application must allow users to manage their profiles.",
+            "priority": "HIGH"
+          }
+        ],
+        "non_functional_requirements": [
+          {
+            "id": "req-004",
+            "description": "The web application must be secure.",
+            "priority": "HIGH"
+          },
+          {
+            "id": "req-005",
+            "description": "The web application must be fast.",
+            "priority": "MEDIUM"
+          },
+          {
+            "id": "req-006",
+            "description": "The web application must be user-friendly.",
+            "priority": "MEDIUM"
+          }
+        ],
+        "constraints": [],
+        "assumptions": [],
+        "glossary": {
+          "RequirementType": "Categorization of requirements into functional and non-functional.",
+          "Priority": "Indicates the importance of the requirement (HIGH, MEDIUM, LOW)."
+        }
+      },
+      "traceability_matrix": [
+        {
+          "requirement_id": "req-001",
+          "business_objective": "Enable user registration to enhance user base.",
+          "test_cases": [
+            "TC-001",
+            "TC-002"
+          ],
+          "implementation_tasks": [
+            "Task-001",
+            "Task-002"
+          ],
+          "acceptance_criteria": [
+            "User can register successfully",
+            "Validation messages are displayed for invalid inputs"
+          ],
+          "stakeholder_approval": {}
+        },
+        {
+          "requirement_id": "req-002",
+          "business_objective": "Allow users to access their accounts securely.",
+          "test_cases": [
+            "TC-003",
+            "TC-004"
+          ],
+          "implementation_tasks": [
+            "Task-003",
+            "Task-004"
+          ],
+          "acceptance_criteria": [
+            "User can login with valid credentials",
+            "Error message for invalid credentials"
+          ],
+          "stakeholder_approval": {}
+        },
+        {
+          "requirement_id": "req-003",
+          "business_objective": "Empower users to manage their profiles effectively.",
+          "test_cases": [
+            "TC-005",
+            "TC-006"
+          ],
+          "implementation_tasks": [
+            "Task-005",
+            "Task-006"
+          ],
+          "acceptance_criteria": [
+            "User can update profile information",
+            "Changes are saved successfully"
+          ],
+          "stakeholder_approval": {}
+        },
+        {
+          "requirement_id": "req-004",
+          "business_objective": "Ensure user data is protected against unauthorized access.",
+          "test_cases": [
+            "TC-007"
+          ],
+          "implementation_tasks": [
+            "Task-007"
+          ],
+          "acceptance_criteria": [
+            "Data encryption is implemented",
+            "Access controls are in place"
+          ],
+          "stakeholder_approval": {}
+        },
+        {
+          "requirement_id": "req-005",
+          "business_objective": "Provide a responsive and fast user experience.",
+          "test_cases": [
+            "TC-008"
+          ],
+          "implementation_tasks": [
+            "Task-008"
+          ],
+          "acceptance_criteria": [
+            "Page load time is under 2 seconds"
+          ],
+          "stakeholder_approval": {}
+        },
+        {
+          "requirement_id": "req-006",
+          "business_objective": "Enhance user satisfaction through intuitive design.",
+          "test_cases": [
+            "TC-009"
+          ],
+          "implementation_tasks": [
+            "Task-009"
+          ],
+          "acceptance_criteria": [
+            "User feedback indicates ease of use"
+          ],
+          "stakeholder_approval": {}
+        }
+      ],
+      "acceptance_criteria_document": {
+        "req-001": [
+          "User can register successfully",
+          "Validation messages are displayed for invalid inputs"
+        ],
+        "req-002": [
+          "User can login with valid credentials",
+          "Error message for invalid credentials"
+        ],
+        "req-003": [
+          "User can update profile information",
+          "Changes are saved successfully"
+        ],
+        "req-004": [
+          "Data encryption is implemented",
+          "Access controls are in place"
+        ],
+        "req-005": [
+          "Page load time is under 2 seconds"
+        ],
+        "req-006": [
+          "User feedback indicates ease of use"
+        ]
+      },
+      "test_plan_outline": [
+        "Define test objectives",
+        "Identify test cases",
+        "Establish testing environment",
+        "Execute test cases",
+        "Document results",
+        "Review and refine tests"
+      ],
+      "implementation_roadmap": [
+        "Phase 1: Requirement gathering and analysis",
+        "Phase 2: Design and architecture",
+        "Phase 3: Development of core functionalities",
+        "Phase 4: Testing and quality assurance",
+        "Phase 5: Deployment and user training",
+        "Phase 6: Maintenance and support"
+      ],
+      "risk_assessment": [
+        "Risk of data breaches due to inadequate security measures",
+        "Risk of poor user adoption if the application is not user-friendly",
+        "Risk of performance issues if the application is not optimized"
+      ],
+      "appendices": {}
+    },
+    "document_metadata": {
+      "version": "1.0",
+      "last_updated": "2023-10-01T12:00:00Z",
+      "total_requirements": 6,
+      "document_completeness": 0.83,
+      "review_status": "Draft",
+      "approvers": []
+    }
+  }
+}
